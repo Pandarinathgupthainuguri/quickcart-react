@@ -1,0 +1,149 @@
+.pointer {
+    cursor: pointer;
+}
+
+:root {
+    /* --main-color: #3498db; */
+    --secondryBackGround: rgb(203, 158, 158);
+}
+
+svg {
+    color: rgb(255, 255, 255);
+}
+
+.navbar form input {
+    color: black;
+}
+
+.navbar form input:focus {
+    border: none;
+    outline: none;
+}
+
+.navbar ul.navbar-nav>li:hover {
+    background-color: var(--secondryBackGround);
+
+}
+
+.navbar ul.navbar-nav li a:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+
+.navbar .list-group li {
+    background-color: var(--secondryBackGround);
+}
+
+
+/* right arrow icon on list */
+.navbar .list-group-item svg {
+    display: none;
+    /* Initially hide the icon */
+}
+
+.navbar .list-group-item:hover svg {
+    display: inline;
+    /* Show the icon on hover */
+}
+
+
+
+/* show subList */
+.navbar .list-group .subList {
+    display: none;
+}
+
+/* Show the List on hover */
+.navbar #Men-list:hover .subList {
+    display: inline;
+}
+
+.navbar #Women-list:hover .subList {
+    display: inline;
+}
+
+.navbar #Watches-list:hover .subList {
+    display: inline;
+}
+
+.navbar #Kids-list:hover .subList {
+    display: inline;
+}
+
+
+/* sublist styling */
+.navbar .subList {
+    top: 0;
+    right: -54%;
+    width: 123px;
+    border-radius: 0 0 0 7px;
+}
+
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    /* Firefox */
+    -ms-overflow-style: auto;
+    /* IE 10+ */
+    overflow: auto !important;
+    /* Force scroll behavior */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+#carouselExampleCaptions {
+    margin-top: 60px !important;
+}
+
+
+
+
+/* footer */
+
+.footer a.footer-link {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a.footer-link:hover {
+    color: #ffc107;
+}
+
+.footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer p,
+.footer li {
+    font-size: 14px;
+}
+
+@media (max-width: 576px) {
+    .footer {
+        text-align: center;
+    }
+}
