@@ -1,112 +1,115 @@
-<li className="nav-item p-1 me-md-1 position-relative px-3 dropdown" style={{ backgroundColor: '' }}
-                onMouseEnter={() => handleMouseMove('fashion')}
-                onMouseLeave={() => handleMouseLeave()}
-              >
-                {/* {width < 768 && } */}
+# QuickCart – Modern E-Commerce Web App 🛒
 
-                {width >= 1024 ? <>
-                  <a className="nav-link" href="#" onClick={() => handleClick('fashion')}>Fashion</a>
+[Live Demo 🚀](https://quickcart-ecommerce-one.vercel.app/)
 
-                  <div className="left position-absolute start-0 top-0 bg-dark" style={{
-                    height: '100%', width: '10px', borderRadius: '0 0 5px 0',
+QuickCart is a responsive and dynamic e-commerce website built using **React**, **Vite**, **Material-UI**, and **Bootstrap 5**. It features real-world functionality such as product search, filtering, detailed views, cart management, and user feedback — designed to demonstrate real-world frontend development skills, making it a strong addition to any portfolio or production-ready store.
 
-                  }}></div>
-                  <div className="right position-absolute end-0 top-0 bg-dark" style={{
-                    height: '100%', width: '10px', borderRadius: '0 0 0 5px',
+---
 
-                  }}></div>
-                </> :
-                  <>
-                    <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Fashion</a>
-                    <ul className="dropdown-menu">
-                      <li onClick={() => handleClick('fashion')}>
-                        <a className="dropdown-item" href="#">All</a>
-                      </li>
-                      {
-                        menWear.map((e, index) =>
-                          <li onClick={() => handleClick(e)} key={index}>
-                            <a className="dropdown-item" href="#">{e}</a>
-                          </li>)
-                      }
-                    </ul>
-                  </>
-                }
+## 🔥 Features
 
-                {(hoverList === 'fashion' && width >= 1024) && <div className='position-absolute z-3' style={{
-                  top: '48px', left: '-50%'
-                }}>
-                  <ul className="list-group list-group-flush rounded-bottom-3 text-nowrap" style={{ width: '230px' }}>
+* 🏍️ Product browsing with category, brand, and rating filters
+* 🧠 Intelligent recommendations and similar items
+* 🔍 Search bar with keyword-based filtering
+* 🛒 Shopping cart with quantity control
+* 💸 Discount calculation and pricing breakdown
+* 📜 Responsive design for desktop & mobile
+* 🔔 Snackbar alerts on cart updates
+* 📢 Rotating ad banners for promotions
+* ⚡ Page scroll resets on route change
+* 🧩 Cart data persists on page refresh using localStorage
+---
 
-                    <li id='Men-list' className="list-group-item pointer d-flex justify-content-between align-items-center position-relative">
+## 🛠️ Tech Stack
 
-                      <p className='m-0' >Men's Wear</p>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" className="ms-2 bi bi-caret-right" viewBox="0 0 16 16">
-                        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
-                      </svg>
+* **Frontend:** React, Vite
+* **Styling:** Material-UI, Bootstrap 5, Custom CSS
+* **State Management:** React Context API
+* **Routing:** React Router v7+
+* **Notifications:** Notistack
+* **Deployment:** Vercel
 
-                      <ul className='subList list-group list-group-flush rounded-end-3 position-absolute' style={{ top: '0px', right: '-110px' }}>
-                        <li className='list-group-item pointer' onClick={() => handleClick('fashion')} >All</li>
-                        {
-                          menWear.map((e, index) => <li key={index} className='list-group-item pointer'
-                            onClick={() => handleClick(e)}
-                          >{e}</li>)
-                        }
-                      </ul>
+---
 
-                    </li>
+## 🚀 Getting Started
 
+Clone the repo and install dependencies:
 
+```bash
+git clone https://github.com/YOUR_USERNAME/quickcart.git
+cd quickcart
+npm install
+npm run dev
+```
 
-                    <li id='Women-list' className="list-group-item pointer d-flex justify-content-between align-items-center">
-                      Women's Wear
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" className="ms-2 bi bi-caret-right" viewBox="0 0 16 16">
-                        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
-                      </svg>
+To build and preview production locally:
 
-                      <ul className='subList list-group list-group-flush rounded-end-3 position-absolute' style={{ top: '0px', right: '-77px' }}>
-                        <li className='list-group-item pointer'>All</li>
-                        {
-                          womenWear.map((e, index) => <li key={index} className='list-group-item pointer'
-                            onClick={() => handleClick(e)}
-                          >{e}</li>)
-                        }
-                      </ul>
+```bash
+npm run build
+npm run preview
+```
 
-                    </li>
+---
 
-                    <li id='Watches-list' className="list-group-item m-0 pointer d-flex justify-content-between align-items-center">
-                      Watches and accessories
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" className="ms-2 bi bi-caret-right" viewBox="0 0 16 16">
-                        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
-                      </svg>
+## 📀 Folder Structure
 
-                      <ul className='subList list-group list-group-flush rounded-end-3 position-absolute' style={{ top: '0px', right: '-123px' }}>
-                        <li className='list-group-item pointer'>All</li>
-                        {
-                          accessories.map((e, index) => <li key={index} className='list-group-item pointer'
-                            onClick={() => handleClick(e)}
-                          >{e}</li>)
-                        }
-                      </ul>
+```
+quickcart/
+├── public/
+│   └── screenshots/             # UI screenshots for documentation
+│
+├── src/
+│   ├── appRoutes/              # Centralized routing definitions
+│   ├── components/             # Reusable UI components (advertisement Banner, Footer, etc.)
+│   ├── context/                # Context API for state management
+│   ├── others/                 # SnackBar, EmptyCart, etc.
+│   ├── pages/                  # Page-level components (Home, Cart, Navbar, DetailPage, etc.)
+│   ├── utils/                  # Utility functions (localStorage helpers, Data.js etc.)
+│   ├── App.jsx                 # Root component
+│   ├── main.jsx                # Entry point
+│   └── index.css               # Global styles
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── eslint.config.js
+└── README.md
+```
 
-                    </li>
+---
 
-                    <li id="Kids-list" className="list-group-item pointer d-flex justify-content-between align-items-center">
-                      Kids
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark" className="ms-2 bi bi-caret-right" viewBox="0 0 16 16">
-                        <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
-                      </svg>
+## 📸 Screenshots
 
-                      <ul className='subList list-group list-group-flush rounded-end-3 position-absolute' style={{ top: '0px', right: '-118px' }}>
-                        <li className='list-group-item pointer'>All</li>
-                        <li className='list-group-item pointer'>Kids</li>
-                      </ul>
+### 🏠 Homepage
+![Homepage](public/screenshots/home.png)
 
-                    </li>
-                  </ul>
+### 🔍 Search Page
+![Search Page](public/screenshots/Search%20Page.png)
+
+### 🧾 Cart Page
+![Cart Page](public/screenshots/Cart%20page.png)
+
+### 🧩 Detail Page
+![Detail Page](public/screenshots/Detail%20Page.png)
+
+### 📌 Navbar
+![Navbar 1](public/screenshots/navbar1.png)
+![Navbar 2](public/screenshots/navbar2.png)
+
+### 🔄 Related Items
+![Related Item](public/screenshots/Related%20Item.png)
 
 
+---
 
-                </div>}
+## 🤝 Acknowledgements
 
-              </li>
+This project was built as part of my portfolio to demonstrate proficiency in React-based frontend development, UI/UX, and responsive e-commerce interfaces.
+
+---
+
+## 🔗 License
+
+This project is open-source and available under the [MIT License](LICENSE).
