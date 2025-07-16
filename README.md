@@ -37,7 +37,7 @@ Clone the repo and install dependencies:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/quickcart.git
-cd quickcart
+cd quickcart-ecommerce
 npm install
 npm run dev
 ```
@@ -113,3 +113,8 @@ This project was built as part of my portfolio to demonstrate proficiency in Rea
 ## 🔗 License
 
 This project is open-source and available under the [MIT License](LICENSE).
+MIT License
+
+Copyright (c) 2025 Pandarinath Guptha Inuguri
+
+Permission is hereby granted, free of charge, to any person obtaining a copy...
